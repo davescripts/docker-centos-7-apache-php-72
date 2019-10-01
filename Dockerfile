@@ -1,8 +1,8 @@
 FROM centos:7
 
 # Install Apache
-RUN yum -y update
-RUN yum -y install httpd httpd-tools
+RUN yum -y --setopt=tsflags=nodocs update
+RUN yum -y --setopt=tsflags=nodocs install httpd httpd-tools
 
 # Install EPEL Repo
 RUN rpm -Uvh https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm \
